@@ -1,0 +1,13 @@
+{
+  "tests": [
+    {
+      "name": "Простой расчёт",
+      "method": "POST",
+      "path": "/",
+      "body": {"question": "Сколько будет 15% от 3000 рублей?"},
+      "expectedStatus": 200,
+      "expectedBody": {"answer": "string"},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
