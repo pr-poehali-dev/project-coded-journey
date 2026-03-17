@@ -12,9 +12,9 @@ interface SquaresProps {
 export function Squares({
   direction = "right",
   speed = 1,
-  borderColor = "#333",
+  borderColor = "#2d1b69",
   squareSize = 40,
-  hoverFillColor = "#222",
+  hoverFillColor = "#3b1fa8",
   className,
 }: SquaresProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -35,7 +35,7 @@ export function Squares({
     if (!ctx) return
 
     // Set canvas background
-    canvas.style.background = "#060606"
+    canvas.style.background = "#08041a"
 
     const resizeCanvas = () => {
       const rect = canvas.getBoundingClientRect()
@@ -83,8 +83,8 @@ export function Squares({
         canvas.height / 2,
         Math.sqrt(Math.pow(canvas.width, 2) + Math.pow(canvas.height, 2)) / 2,
       )
-      gradient.addColorStop(0, "rgba(6, 6, 6, 0)")
-      gradient.addColorStop(1, "#060606")
+      gradient.addColorStop(0, "rgba(8, 4, 26, 0)")
+      gradient.addColorStop(1, "#08041a")
 
       ctx.fillStyle = gradient
       ctx.fillRect(0, 0, canvas.width, canvas.height)
